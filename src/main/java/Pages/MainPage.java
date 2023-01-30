@@ -15,7 +15,8 @@ public class MainPage extends BaseStepMethod {
     private static final By BTN_MAINPAGE_GIRIS_YAP_HOVER_OVER = By.id("myAccount");
     private static final By BTN_MAINPAGE_GIRIS_YAP_BUTON = By.id("login");
     private static final By TXTUSERDPAGEUSERNAME=By.xpath("((//a[@title='Hesabım'])//span)[2]");
-    private static final By INPUTUSERSEARCHBOX=By.xpath("((//input[@type='text'])[1]");
+    private static final By INPUTUSERDPAGESEARCHBOX =By.xpath("(//input[@type='text'])[1]");
+
 
     public void goToUrl(String url) {
         driver.get(url);
@@ -36,7 +37,7 @@ public class MainPage extends BaseStepMethod {
     }
 
     public void searchProduct(String product){
-        setTextElement(INPUTUSERSEARCHBOX,product+ Keys.ENTER);
+        setTextElement(INPUTUSERDPAGESEARCHBOX,product+Keys.ENTER);
     }
 
 
